@@ -5,7 +5,7 @@ const urlController = require("./controller/urlController")
 
 
 
-routers.route('/set-url')
+routes.route('/set-url')
     .post(urlController.setUrl);
 
 
