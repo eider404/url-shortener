@@ -1,13 +1,12 @@
 const {Router} = require("express");
 const routes = Router();
 
+const urlController = require("./controller/urlController")
 
 
-routes.post('/set-url',(req, res)=>{
-    const url = req.body;
-    res.json({res: url.url});
-})
 
+routers.route('/set-url')
+    .post(urlController.setUrl);
 
 
 module.exports = routes;
