@@ -40,7 +40,24 @@ const setUrl = async(req, res) => {
 
 
 
+const redireccionar = async(req, res) => {
+    const {urlshort} = req.params;
+    connection.query("SELECT * FROM url WHERE urlShort = ?", [`http://localhost:3000/${urlshort}`], (err, result, fields)=>{
+        if (err) throw err;
+        
+        if(result[0]){
+            //return res.send(result[0].urlReal)
+            res.redirect(result[0].urlReal);
+        }else{
+            pathRoot = __dirname.replace('src/controller','')
+            res.sendFile(pathRoot+'/public/404.html');
+        }
+    });
+}
+
+
 module.exports = {
     setUrl,
+    redireccionar
 
 }
