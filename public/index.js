@@ -15,6 +15,8 @@ function SendUrl (){
             .then( data =>{
                 console.log(data);
                 if(data.status == '200'){
+                    document.querySelector("#message").innerHTML= ""
+                    document.querySelector("#filasDeUrl").innerHTML= ""
                     return document.querySelector("#filasDeUrl").innerHTML= `
                         <tr>
                             <th scope="row">1</th>
@@ -45,7 +47,24 @@ function SendBulkUrl (){
             })
             .then(res => res.json())
             .then( data =>{
-                console.log(data);
+                //console.log(data);
+                if (data.status == 200) {
+                    document.querySelector("#message").innerHTML= ""
+                    document.querySelector("#filasDeUrl").innerHTML= ""
+
+                    for (let i = 0; i < data.inputs.length; i++) {
+                        document.querySelector("#filasDeUrl").innerHTML+= `
+                            <tr>
+                                <th scope="row">${i+1}</th>
+                                <td>${data.inputs[i]}</td>
+                                <td>${data.urlsShort[i]}</td>
+                            </tr>
+                        `;
+                        console.log(i)
+                    }
+                } else {
+                    
+                }
             })
             .catch(err => console.log(err));
 }
