@@ -12,8 +12,8 @@ const bulkUrl = async(req, res) => {
     var URLsShort = [];
 
     if (!archivo) {
-        res.status(400).send('No se ha subido ningún archivo');
-        return;
+        return res.status(400).json({status: 401 , mensaje: 'No se ha subido ningún archivo'});
+        
     }
 
     const buffer = archivo.buffer;
