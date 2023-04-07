@@ -25,6 +25,10 @@ function SendUrl (){
                         </tr>
                     `;
                 }else{
+
+                    document.querySelector("#message").innerHTML= ""
+                    document.querySelector("#filasDeUrl").innerHTML= ""
+
                     return document.querySelector("#message").innerHTML= `
                     <div class="alert alert-danger" role="alert" style="width: 400px;">
                         ${data.mensaje.toUpperCase()}
@@ -63,6 +67,14 @@ function SendBulkUrl (){
                         console.log(i)
                     }
                 } else {
+                    document.querySelector("#message").innerHTML= ""
+                    document.querySelector("#filasDeUrl").innerHTML= ""
+
+                    document.querySelector("#message").innerHTML= `
+                        <div class="alert alert-danger" role="alert" style="width: 400px;">
+                            ${data.mensaje.toUpperCase()}
+                        </div>
+                    `;
                     
                 }
             })
