@@ -25,7 +25,7 @@ const setUrl = async(req, res) => {
         if (err) throw err;
         
         if(result[0]){
-            return res.status(200).json({status: 200,input: url.urlReal ,urlShort: url.urlShort})
+            return res.status(200).json({status: 200,input: url.urlReal ,urlShort: result[0].urlShort})
         }  
 
         connection.query("INSERT INTO url set ?", [url], (err, rows)=>{
