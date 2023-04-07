@@ -54,7 +54,7 @@ const bulkUrl = async(req, res) => {
     }
 
     
-    return await res.json({input: URLs, output: URLsShort});
+    return res.status(200).json({status: 200,inputs: URLs ,urlsShort: URLsShort})
     
 }
 
