@@ -20,7 +20,7 @@
                             <input type="url" class="form-control" id="urlInput" placeholder="Ingrese una URL" name="urlReal">
                         </div>
                         <div style="text-align: center;">
-                            <button type="button" class="btn btn-primary">Enviar</button>
+                            <button onclick="SendUrl()" type="button" class="btn btn-primary">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -32,7 +32,7 @@
                             <input type="file" class="form-control" id="fileInput" name="archivo">
                         </div>
                         <div style="text-align: center;">
-                            <button type="button" class="btn btn-primary">Enviar</button>
+                            <button onclick="SendBulkUrl()" type="button" class="btn btn-primary">Enviar</button>
                         </div>  
                     </form>
                 </div>
@@ -51,6 +51,6 @@
 
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./index.html"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
