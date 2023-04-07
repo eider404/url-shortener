@@ -14,6 +14,15 @@ function SendUrl (){
             .then(res => res.json())
             .then( data =>{
                 console.log(data);
+                if(data.status == '200'){
+                    return document.querySelector("#filasDeUrl").innerHTML= `
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>${data.input}</td>
+                            <td>${data.urlShort}</td>
+                        </tr>
+                    `;
+                }
             })
             .catch(err => console.log(err));
 }
