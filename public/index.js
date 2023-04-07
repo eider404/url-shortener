@@ -22,6 +22,12 @@ function SendUrl (){
                             <td>${data.urlShort}</td>
                         </tr>
                     `;
+                }else{
+                    return document.querySelector("#message").innerHTML= `
+                    <div class="alert alert-danger" role="alert" style="width: 400px;">
+                        ${data.mensaje.toUpperCase()}
+                    </div>
+                    `;
                 }
             })
             .catch(err => console.log(err));
