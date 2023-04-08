@@ -20,8 +20,8 @@ function SendUrl (){
                     return document.querySelector("#filasDeUrl").innerHTML= `
                         <tr>
                             <th scope="row">1</th>
-                            <td>${data.input}</td>
-                            <td>${data.urlShort}</td>
+                            <td>${data.input} <a href="${data.input}" target="_blank">ver</a></td>
+                            <td>${data.urlShort} <a href="${data.urlShort}" target="_blank">ver</a></td>
                         </tr>
                     `;
                 }else{
@@ -60,8 +60,8 @@ function SendBulkUrl (){
                         document.querySelector("#filasDeUrl").innerHTML+= `
                             <tr>
                                 <th scope="row">${i+1}</th>
-                                <td>${data.inputs[i]}</td>
-                                <td>${data.urlsShort[i]}</td>
+                                <td>${data.inputs[i]} <a href="${data.inputs[i]}  " target="_blank">ver</a></td>
+                                <td>${data.urlsShort[i]} <a href="${data.urlsShort[i]}  " target="_blank">ver</a></td>
                             </tr>
                         `;
                         console.log(i)
