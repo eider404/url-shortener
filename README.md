@@ -50,7 +50,7 @@ El proyecto puede funcionar de dos formas:
 
 2. Mediante un archivo.txt donde puedes agregar cientos o miles de url
 	- Al enviar el archivo, generara una tabla con todas las urls que estaban en el archivo junto con su url corta, en caso de que la url no sea valida aparecera que la url no es valida 
-	- Puedes probarlo con ayuda del archivo [file.txt](https://github.com/eider404/url-shortener/blob/main/file.txt "file.txt")
+	- Puedes probarlo con ayuda del archivo [file.txt](https://github.com/eider404/url-shortener/blob/main/file "file.txt")
 	
 
 ![file](https://i.ibb.co/fxWgpN8/Captura-desde-2023-04-07-23-41-38.png)
